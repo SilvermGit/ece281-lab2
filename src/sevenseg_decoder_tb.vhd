@@ -52,21 +52,21 @@ begin
     );
     test_process : process
     begin
-        w_HEx <= x"B"; wait for 10ns;
+        w_HEx <= x"B"; wait for 10 ns;
             assert (w_seg_n = "0000011") report "bad with the button off" severity failure;
-        w_HEx <= x"A"; wait for 10ns;
+        w_HEx <= x"A"; wait for 10 ns;
             assert (w_seg_n = "0001000") report "bad with 10" severity failure;
-        w_HEx <= x"1"; wait for 10ns;
+        w_HEx <= x"1"; wait for 10 ns;
             assert (w_seg_n = "1111001") report "bad with 1" severity failure;
-        w_HEx <= x"5"; wait for 10ns;
+        w_HEx <= x"5"; wait for 10 ns;
             assert (w_seg_n = "0010010") report "bad with 5" severity failure;
-        w_HEx <= x"6"; wait for 10ns;
+        w_HEx <= x"6"; wait for 10 ns;
             assert (w_seg_n = "0000010") report "bad with 6" severity failure;
-        w_HEx <= x"8"; wait for 10ns;
+        w_HEx <= x"8"; wait for 10 ns;
             assert (w_seg_n = "0000000") report "bad with 8" severity failure;
-        w_HEx <= x"E"; wait for 10ns;
+        w_HEx <= x"E"; wait for 10 ns;
             assert (w_seg_n = "0000110") report "bad with 14" severity failure;
-        w_HEx <= x"9"; wait for 10ns;
+        w_HEx <= x"9"; wait for 10 ns;
             assert (w_seg_n = "0011000") report "bad with 9" severity failure;
         wait;
     end process;
